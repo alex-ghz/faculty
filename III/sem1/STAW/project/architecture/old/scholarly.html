@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ElecTrik</title>
+</head>
+
+<body>
+<h1>
+    Arhitectura ElecTrik
+</h1>
+<section typeof="sa:AuthorsList">
+    <h2>Autori</h2>
+    <ul>
+        <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person" resource="https://en.wikipedia.org/wiki/John_Henry_Holland">
+                    <meta property="schema:givenName" content="Alex">
+                    <meta property="schema:familyName" content="Marina">
+                    <span property="schema:name">Alex Marina</span>
+                </span>
+            <ul>
+                <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                    <a href="mailto:marinagalexandru@gmail.com" property="schema:email">marinagalexandru@gmail.com</a>
+                </li>
+            </ul>
+        </li>
+        <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person" resource="https://en.wikipedia.org/wiki/John_Henry_Holland">
+                    <meta property="schema:givenName" content="Narcis">
+                    <meta property="schema:familyName" content="Mihuleac">
+                    <span property="schema:name">Narcis Mihuleac</span>
+                </span>
+            <ul>
+                <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                    <a href="mailto:narcismihuleac@yahoo.co.uk" property="schema:email">narcismihuleac@yahoo.co.uk</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</section>
+<section typeof="sa:Etape" id="etape" role="doc-Etape">
+    <h2>Etapele principale ale dezvoltarii proiectului</h2>
+    <ul>
+        Dezvoltarea proiectului consta din urmatoarele etape:
+        <li>
+            Crearea unei baze de date in conformitate cu cerintele proiectului
+        </li>
+        <li>
+            Crearea unui server de Node.js
+        </li>
+        <li>
+            Implementarea unei interfete Web "user-friendly"
+        </li>
+        <li>
+            Interconectarea server-ului cu interfata
+        </li>
+        <li>
+            Conectarea server-ului cu baza de date
+        </li>
+        <li>
+            Conectarea server-ului cu API-urile necesare
+        </li>
+        <li>
+            Implementarea cerintelor
+        </li>
+        <li>
+            Testarea aplicatiei
+        </li>
+    </ul>
+
+</section>
+<section typeof="sa:interactiune" id="interactiune" role="doc-Interactiune">
+    <h2>
+        Maniera de interactiune cu utilizatorul
+    </h2>
+    <ul>
+        Aplicatia va contine doua sisteme de autentificare si inregistrare, unul pentru cumparatori si altul pentru vanzatori.
+        Dupa autentificare/inregistrare, urmeaza un set de interactiuni ale utilizatorilor:
+        <li>
+            <h3>Cumparatori:</h3>
+            <p>
+                Initial, unui cumparator i se va cere confirmarea inregistrarii(accesarea unui link primit pe email).
+                Dupa acest pas, un cumparator are libertarea de a naviga pe toate paginile paginii web(noutati, shop, contact, harta etc.) destinate lui.
+                Un cumparator are posibilitatea de a-si exprima parerea referitoare la un produs/noutate chiar pe pagina respectiva.
+            </p>
+        </li>
+        <li>
+            <h3>Vanzatori:</h3>
+            <p>
+                Initial acestia vor fi redirectionati catre o pagina cu articole sau produse postate de catre ei, avand acces la toate comenzile plasate si diverse statistici referitoare la profit/rating/etc.
+                De asemenea, este prezenta si optiunea publicarii unei stiri noi sau a unui produs. Se poate opta pentru notificarea unor clienti mai "fideli"(care au mai plasat cel putin o comanda).
+                Daca vanzatorul alege sa notifice un cumparator "x", acesta ii poate trimite un voucher pentru o oferta mult mai irezistibila.
+            </p>
+        </li>
+    </ul>
+</section>
+<section typeof="sa:management" id="management" role="doc-management">
+    <h2>Management-ul codului-sursa</h2>
+    <p>Codul-sursa va fi stocat pe platforma BitBucket, la link-ul <a href="https://bitbucket.org/alexmg97/electrik/src/master/">https://bitbucket.org/alexmg97/electrik/src/master/</a>. Imediat dupa incheierea unui task, fiecare contribuitor al proiectului va face commit la ceea ce a lucrat.</p>
+</section>
+<section typeof="sa:API" id="API" role="doc-API">
+    <h2>Modelarea datelor proprii</h2>
+    <p>Datele introduse de catre utilizator in formularele din aplicatie, vor fi transmise printr-un POST, catre server.</p>
+    <p>Acesta la va prelua si le va introduce in tabelele corespunzatoare: datele de inregistrare in tabela care contine informatii despre produse sau vanzatori, codul unui produs va fi verificat in tabela de produs, datele transmise la crearea unei noutati, in tabela de noutati etc.</p>
+    <p>De asemenea clientul va face GET-uri pentru a putea obtine informatiile necesare, astfel incat ca organizatorul sa fie informat despre: petrecerile pe care le are create sau la care a participat, clasamentul live al melodiilor etc.</p>
+    <p>Serverul de Node.js combinat cu framework-ul Express se va conecta cu baza de date MongoDB pentru a putea realiza aceste interactiuni.</p>
+    <p>Aplicatia va fi structurata intr-un MVC (model view controller), in care fisierul de modele va contine schemele bazei de date, cel de view partea de client, iar controllerele partea de server.</p>
+</section>
+<section>
+    <h2>Stocare la nivel de client/server</h2>
+    <p>
+        Solutia de stocare aleasa pentru acest proiect este MongoDB datorita usurintei de folosire a acestuia si a complementarii cu Node.js.
+        Pe adresa de BitBucket mentionata mai sus se poate gasi o diagrama UML reprezentand schema bazei de date a proiectului.
+    </p>
+</section>
+</body>
+
+</html>

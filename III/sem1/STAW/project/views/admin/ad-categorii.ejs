@@ -1,0 +1,36 @@
+<div class="produse">
+    <div class="actions">
+        <button class="submit-btn" id="category-add">+ Adauga</button>
+    </div>
+    <% if (categorii.length === 0) { %>
+        <h2>Nu exista momentan categorii</h2>
+    <% } else { %>
+        <div class="table-wrapper">
+            <div class="table">
+                <div class="table-head">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="column-uno">Denumire</th>
+                            <th class="column-uno">Data creare</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-body">
+                    <table>
+                        <tbody>
+                        <% categorii.forEach(categorie => { %>
+                            <tr>
+                                <td class="column-uno"><%= categorie.displayName %></td>
+                                <td class="column-dos"><%= categorie.created_at %></td>
+                            </tr>
+                        <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <% } %>
+    <% include ad-category-info %>
+</div>

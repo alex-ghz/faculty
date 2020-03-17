@@ -1,0 +1,14 @@
+<img src="/images/default-product.jpg" alt="Cool product m8">
+<div class="card-info">
+    <h2><%= produs.name %></h2>
+    <p>Pret: <%= produs.specifics.price.value %> <%= produs.specifics.price.moneda %></p>
+</div>
+<div class="product-actions">
+    <div class="action-wrapper buy">
+        <a href="#" onclick="addProductToCart(this); return false;" product-id="<%= produs._id %>">Adauga in cos</a>
+    </div>
+    <div class="action-wrapper wish">
+        <a href="#">Wishlist it!<i class="fas fa-heart-broken fa-lg"></i>
+        </a>
+    </div>
+</div>

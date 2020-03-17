@@ -1,0 +1,12 @@
+<div class="filter">
+    <h3>
+        <%= name.toLowerCase()[0].toUpperCase() + name.slice(1).toLowerCase() %>
+    </h3>
+    <div class="filter-option">
+        <% options.forEach(option => { %>
+            <a href="javascript:void(0)"
+               data-attr="<%= name.toLowerCase() + '-' + option.value %>"
+               class="<%= option.active ? 'active' : '' %>"> <%= option.value %></a>
+        <% }) %>
+    </div>
+</div>

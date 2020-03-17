@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ad-head %>
+    <% include head %>
+</head>
+<body>
+<% include header %>
+<main>
+    <div class="container">
+        <div class="left-side">
+            <div class="sidebar">
+                <ul class="menus">
+                    <li class="menu">
+                        <a href="#">Contul meu</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#">Comenzile mele</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="content">
+                <div id="content" style="height: 100%"></div>
+                <div id="loading-screen" class="loading-screen" style="display: none">
+                    <div class="spinner">
+                        <i class="fas fa-spinner fa-spin fa-7x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="notif-area" class="loading-screen">
+        <div id="notifications">
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript" src="/javascripts/content-page-user.js"></script>
+<div id="scripts"></div>
+</body>
+</html>

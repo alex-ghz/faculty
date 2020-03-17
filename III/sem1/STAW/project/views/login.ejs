@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ad-head %>
+    <% include head %>
+    <link rel='stylesheet' href='/stylesheets/admin/login.css'/>
+</head>
+<body>
+<% include header %>
+<main>
+    <div class="container">
+        <div class="container-login">
+            <form action="#" id="login-form" class="login">
+                <span class="form-title">ElecTriK - Login</span>
+                <div class="wrp-email">
+                    <input type="text" id="form-email" class="input100" name="email">
+                    <span class="focus-input100" data-placeholder="Email"></span>
+                </div>
+                <div class="wrp-email" style="display: none" id="register-supp">
+                    <input type="text" id="form-firstname" class="input100" name="firstname">
+                    <span class="focus-input100" data-placeholder="Prenume"></span>
+                </div>
+                <div class="wrp-password">
+                    <input type="password" id="form-password" class="input100" name="password">
+                    <span class="focus-input100" data-placeholder="Parola"></span>
+                </div>
+                <div class="submit">
+                    <input class="submit-btn" type="submit" value="Go">
+                </div>
+                <div class="register">
+                    <span class="span-text">Nu am cont. <a href="#" id="register">Inregistrare</a></span>
+                </div>
+                <div class="err" style="display: none" id="err-msg">
+                    <p class="err-msg"></p>
+                </div>
+                <ul class="options">
+                    <li><span class="span-text">Forgot</span> <a href="#" class="text">credentials</a> <span
+                                class="span-text">much?</span></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script type="text/javascript" src="/javascripts/input-addval.js"></script>
+<script type="text/javascript" src="/javascripts/login.js"></script>
+</body>
+</html>

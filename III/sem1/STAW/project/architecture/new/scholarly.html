@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ElecTrik Scholarly</title>
+</head>
+<body>
+    <h1>ElecTrik</h1>
+
+    <section typeof="sa:authors_list">
+        <h2>Autorii Aplicatiei</h2>
+        <ul>
+            <li typeof="sa:author_role" property="schema:author">
+                <span typeof="schema:person">
+                    <meta property="schema:given_name" content="Alexandru">
+                    <meta property="schema:family_name" content="Marina">
+                    <span property="schema:name">Marina Alexandru</span>
+                </span>
+                <ul>
+                    <li property="schema:role_contact_point" typeof="schema:contact_point">
+                        <a href="mailto:marinagalexandru@gmail.com" property="schema:email">marinagalexandru@gmail.com</a>
+                    </li>
+                </ul>
+            </li>
+            <li typeof="sa:author_role" property="schema:author">
+                <span typeof="schema:person">
+                    <meta property="schema:given_name" content="Narcis">
+                    <meta property="schema:family_name" content="Mihuleac">
+                    <span property="schema:name">Mihuleac Narcis</span>
+                </span>
+                <ul>
+                    <li property="schema:role_contact_point" typeof="schema:contact_point">
+                        <a href="mailto:narcispetrisor.mihuleac@gmail.com" property="schema:email">narcispetrisor.mihuleac@gmail.com</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:stages" id="stages" role="doc-stages">
+        <h2>Dezvoltarea Aplicatiei</h2>
+        <ul>
+            <li>
+                Cerinte - Intelegere & Documentare
+            </li>
+            <li>
+                Arhitectura - Client, Server, APIs & Database
+            </li>
+            <li>
+                Dezvoltare - Client, Server, APIs & Database
+            </li>
+            <li>
+                Integrare - Client, Server, APIs & Database
+            </li>
+            <li>
+                Testare - Verificare & Validare
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:requirements" id="requirements" role="doc-requirements">
+        <h2>Cerintele Aplicatiei</h2>
+        <ul>
+            <li>
+                Gestionarea in timp real a fluxurilor de activitati din cadrul unui lant de furnizori de energie, baterii si acumulatori speciali pentru drone, biciclete si autoturisme electrice.
+            </li>
+            <li>
+                Posibilitatea de a monitoriza de la distanta stocul de baterii.
+            </li>
+            <li>
+                Plata energiei livrate.
+            </li>
+            <li>
+                Notificarea clientilor fideli asupra schimbarilor survenite (modificari de pret, indisponibilitatea anumitor produse, oferte speciale, etc.) utilizand fluxuri RSS.
+            </li>
+            <li>
+                Localizarea statiilor de furnizare a energiei electrice pe harta folosind servicii Web cartografice.
+            </li>
+            <li>
+                Rapoarte si vizualizari atractive privitoare la stocurile de baterii si a situatiei vanzarilor per sortiment, perioada de timp sau in functie de client.
+            </li>
+            <li>
+                Arhitectura modulara a aplicatiei.
+            </li>
+            <li>
+                Implementarea extensiilor pentru functionalitati suplimentare.
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:architecture" id="architecture" role="doc-architecture">
+        <h2>Arhitectura Aplicatiei</h2>
+        <ul>
+            <li>
+                REST (Representational State Transfer) Architecture
+            </li>
+            <li>
+                MVC (Model - View - Controller) Pattern
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:technologies" id="technologies" role="doc-technologies">
+        <h2>Tehnologii Utilizate in Cadrul Aplicatiei</h2>
+        <ul>
+            <li>
+                Client Interface - Embedded JavaScript Templates, Less.js & Client-Side JavaScript
+            </li>
+            <li>
+                Business Logic - Express.js
+            </li>
+            <li>
+                APIs - Express.js
+            </li>
+            <li>
+                Database - MongoDB
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:server_client" id="server_client" role="doc-server_client">
+        <h2>Interactiunea Client-Server</h2>
+        <ul>
+            <li>
+                Client Interface - Dynamic Content w/ EJS, Client-Side JS and AJAX.
+            </li>
+            <li>
+                Business Logic - Doesn't interact directly with Data from Database; Deliver Local Data and Database Data from API to Client.
+            </li>
+            <li>
+                API - Directly access and deliver Data from Database.
+            </li>
+            <li>
+                Client -> GET Req -> Server -> EJS Res -> Client -> AJAX Req & Sync w/ Promise -> Server -> Req Extern API -> JSON Res -> Server -> JSON Res -> Client w\ Promise -> Update Content.
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:code_struct" id="code_struct" role="doc-code_struct">
+        <h2>Structura Codului</h2>
+        <ul>
+            <li>
+                Client Interface - Client-Side JavaScript w\ Event Listeners and AJAX Requests.
+            </li>
+            <li>
+                Business Logic - Express.js Routes, Script Manager & API Requests. Get JSON Data from API, Send JSON Data to Client.
+            </li>
+            <li>
+                API - Express.js Routes and Models; Loads all Models when API Starts; Query Database on Req and Send Data as JSON.
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:client" id="client" role="doc-client">
+        <h2>Client Interface</h2>
+        <ul>
+            <li>
+                Index w\ Map
+            </li>
+            <li>
+                Login
+            </li>
+            <li>
+                Register
+            </li>
+            <li>
+                My Account
+            </li>
+            <li>
+                Shop
+            </li>
+            <li>
+                EJS, Client-Side JavaScript w\ Event Listeners and AJAX for Dynamic Content and Notifications.
+            </li>
+            <li>
+                Get and Load Data just when End-User needs it.
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:server" id="server" role="doc-server">
+        <h2>Business Logic</h2>
+        <ul>
+            <li>
+                Routes: Index, Admin, My Account, Notifications, Shop.
+            </li>
+            <li>
+                Script Manager: Login, Notifications, Shop, Page Content for Admin and User.
+            </li>
+            <li>
+                Express.js; Get Req from Client; Req API for Data; Get Data from API; Modify EJS and render it to Client.
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:api" id="api" role="doc-api">
+        <h2>API</h2>
+        <ul>
+            <li>
+                API over ElecTrik MongoDB Database.
+            </li>
+            <li>
+                Models Objects for Data: Admin, Filter, Notifications, Products, User.
+            </li>
+            <li>
+                Loads all Models when at start-up.
+            </li>
+            <li>
+                Read and Write Data into Database; JSON Res to Business Logic's Req.
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:code" id="code" role="doc-code">
+        <h2>Gestionarea Codului Sursa</h2>
+        <ul>
+            <li>
+                Platforma Bitbucket a fost utilizata pentru gestionarea codului sursa.
+            </li>
+            <li>
+                Codul sursa poate fi accesat la urmatorul link: <a href="https://bitbucket.org/alexmg97/electrik/src/master/">https://bitbucket.org/alexmg97/electrik/src/master/</a>.
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

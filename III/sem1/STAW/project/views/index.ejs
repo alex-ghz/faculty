@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <% include head %>
+    <link rel='stylesheet' href='/stylesheets/index.css'/>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 600px;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<% include header %>
+<main>
+    <div class="banner">
+        <div class="content">
+            <div class="left">
+                <h1>Fii si tu un smartElectric!</h1>
+                <p>Te-ai plictisit sa ramai in urma cu trendurile in materie de energie electrica? Avem solutia!</p>
+            </div>
+            <div class="right">
+                <div class="categorii">
+                    <div class="categorie">
+                        <div class="customizator">
+                            <a href="/shop">
+                                <i class="fas fa-car-battery fa-3x"></i>
+                            </a>
+                            <a href="#">
+                                Baterii
+                            </a>
+                        </div>
+                    </div>
+                    <div class="categorie">
+                        <div class="customizator">
+                            <a href="/shop">
+                                <i class="fas fa-car-side fa-3x"></i>
+                            </a>
+                            <a href="/shop/masini-electrice">
+                                Masini electrice
+                            </a>
+                        </div>
+                    </div>
+                    <div class="categorie">
+                        <div class="customizator">
+                            <a href="/shop">
+                                <i class="fas fa-car-side fa-3x"></i>
+                            </a>
+                            <a href="#">
+                                Baterii drone
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="motivation">
+        <div class="container">
+            <div class="card">
+                <div class="img">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <h2>Patchetul complet pentru un smartHouse</h2>
+                <p>De acum gasesti produsele intr-un set complet cat mai atent conceput pentru cerintele fiecarui
+                    client</p>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <h2>Patchetul complet pentru un smartHouse</h2>
+                <p>De acum gasesti produsele intr-un set complet cat mai atent conceput pentru cerintele fiecarui
+                    client</p>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <h2>Patchetul complet pentru un smartHouse</h2>
+                <p>De acum gasesti produsele intr-un set complet cat mai atent conceput pentru cerintele fiecarui
+                    client</p>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+</main>
+<% include footer %>
+<script>
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 47.1741119, lng: 27.5748463},
+            zoom: 15
+        });
+
+        var marker = new google.maps.Marker({
+            position: {lat: 47.1741119, lng: 27.5748463},
+            map: map,
+            title: 'Hello World!'
+        });
+
+        marker.setMap(map)
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf3CQ7E075HqIx6eza_8U5KSemHkWvb48&callback=initMap">
+</script>
+</body>
+</html>

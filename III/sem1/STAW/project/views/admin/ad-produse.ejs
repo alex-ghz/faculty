@@ -1,0 +1,40 @@
+<div class="produse">
+    <div class="actions">
+        <button class="submit-btn" id="product-add">+ Adauga</button>
+    </div>
+    <% if (produse.length === 0) { %>
+        <h2>Nu exista momentan produse</h2>
+    <% } else { %>
+        <div class="table-wrapper">
+            <div class="table">
+                <div class="table-head">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="column-uno">Denumire</th>
+                            <th class="column-uno">Categorie</th>
+                            <th class="column-dos">Pret</th>
+                            <th class="column-dos">Detalii</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-body">
+                    <table>
+                        <tbody>
+                        <% produse && produse.forEach(product => { %>
+                            <tr>
+                                <td class="column-uno"><%= product.name %></td>
+                                <td class="column-uno"><%= product.specifics.category.value %></td>
+                                <td class="column-dos"><%= product.specifics.price.value %> <%= product.specifics.price.moneda %></td>
+                                <td class="column-dos">Detalii</td>
+                            </tr>
+                        <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <% } %>
+    <%- include('ad-product-info', {categorii: categorii}); %>
+</div>

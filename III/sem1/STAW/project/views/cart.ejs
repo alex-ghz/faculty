@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <% include head %>
+    <link rel='stylesheet' href='/stylesheets/index.css'/>
+    <link rel='stylesheet' href='/stylesheets/cart.css'/>
+    <link rel='stylesheet' href='/stylesheets/buttons.css'/>
+</head>
+<body>
+<% include header %>
+<main>
+    <div class="cart" id="cart">
+        <div class="cart-wrapper">
+            <div class="title-wrapper">
+                <h1>Cosul de cumparaturi</h1>
+            </div>
+            <div class="title-wrapper" id="no-product" style="display: none">
+                <h1>Nu exista momentan produse in cos</h1>
+            </div>
+            <div id="details">
+                <div class="produse-section" id="produse-section">
+<!--                    <div class="produs">-->
+<!--                        <input type="type" value="2">-->
+<!--                        <div class="denumire">harbuji</div>-->
+<!--                        <div class="cost">20 Lei</div>-->
+<!--                    </div>-->
+<!--                    <div class="produs">-->
+<!--                        <input type="type" value="2">-->
+<!--                        <div class="denumire">harbuji</div>-->
+<!--                        <div class="cost">20 Lei</div>-->
+<!--                    </div>-->
+                </div>
+                <div class="total" id="total-price">
+                    <h2>Total: <div id="price-content">40</div> lei</h2>
+                </div>
+                <div class="detalii-comanda">
+                    <h2>Detalii livrare</h2>
+                    <div class="wrp-email">
+                        <input type="text" id="form-email" class="input100" name="email">
+                        <span class="focus-input100" data-placeholder="Email"></span>
+                    </div>
+                    <div class="wrp-email">
+                        <input type="text" id="form-firstname" class="input100" name="firstname">
+                        <span class="focus-input100" data-placeholder="Nume"></span>
+                    </div>
+                    <div class="wrp-email">
+                        <input type="text" id="form-telefon" class="input100" name="telefon">
+                        <span class="focus-input100" data-placeholder="Telefon"></span>
+                    </div>
+                    <div class="wrp-email">
+                        <input type="text" id="form-oras" class="input100" name="oras">
+                        <span class="focus-input100" data-placeholder="Oras"></span>
+                    </div>
+                </div>
+                <div class="submit">
+                    <input type="submit" class="submit-btn" value="Plaseaza" id="submit">
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<% include footer %>
+<script type="text/javascript" src="/javascripts/cart.js"></script>
+</body>
+</html>

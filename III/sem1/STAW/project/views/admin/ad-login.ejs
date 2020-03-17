@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ad-head %>
+    <link rel='stylesheet' href='/stylesheets/admin/login.css'/>
+</head>
+<body>
+<header></header>
+<main>
+    <div class="container">
+        <div class="container-login">
+            <form action="#" id="login-form" class="login">
+                <span class="form-title">ElecTriK - Panel</span>
+                <div class="wrp-email">
+                    <input type="text" id="form-email" class="input100" name="email">
+                    <span class="focus-input100" data-placeholder="Email"></span>
+                </div>
+                <div class="wrp-password">
+                    <input type="password" id="form-password" class="input100" name="password">
+                    <span class="focus-input100" data-placeholder="Parola"></span>
+                </div>
+                <div class="submit">
+                    <input class="submit-btn" type="submit" value="Go">
+                </div>
+                <div class="err" style="display: none" id="err-msg">
+                    <p class="err-msg"></p>
+                </div>
+                <ul class="options">
+                    <li><span class="span-text">Forgot</span> <a href="#" class="text">credentials</a> <span
+                                class="span-text">much?</span></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</main>
+<% include ad-footer %>
+
+<script type="text/javascript" src="/javascripts/input-addval.js"></script>
+<script type="text/javascript" src="/javascripts/ad-login.js"></script>
+</body>
+</html>

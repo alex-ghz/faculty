@@ -1,0 +1,22 @@
+<div id="product-info-background" class="loading-screen" style="display: none">
+    <div class="product-info-wrapper" id="slide-it">
+        <div class="product-form" id="product-new-form">
+            <h2>Adauga un produs</h2>
+            <form action="#" method="post">
+                <input id="denumire" type="text" name="field1" placeholder="Denumire Produs"/>
+                <select name="categorie" id="categorie">
+                    <option value="None">Categorie</option>
+                    <% categorii && categorii.forEach(categorie => { %>
+                        <option value="<%= categorie._id %>"><%= categorie.displayName %></option>
+                    <% }) %>
+                </select>
+                <input id="additional" type="text" name="field3" placeholder="Aditional"/>
+                <textarea id="descriere" placeholder="Descriere"></textarea>
+                <input id="uploadImage" type="file" name="photo"/>
+                <div class="wrapper-submit">
+                    <button class="submit-btn" type="submit" id="adauga-produs">Adauga</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
